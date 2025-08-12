@@ -1,0 +1,14 @@
+/.vscode
+/Assembly-CSharp-Editor.csproj
+/Assembly-CSharp.csproj
+/Library
+/Logs
+/MagicLeap.SetupTool.Editor.csproj
+/ProjectSettings
+/Temp
+/ThirdParty.Bunny83.simpleJson.csproj
+/UserSettings
+**/*.cache
+**/*.tgz
+**/*.meta
+
