@@ -4,7 +4,7 @@ This repository contains the **testbed implementation, datasets, calibration too
 
 **"XR Reality Check: What Commercial Devices Deliver for Spatial Tracking"**  
 Tianyi Hu, Tianyuan Du, Zhehan Qu, Maria Gorlatova  
-Presented at ISMAR 2025
+To be presented at ISMAR 2025
 
 ---
 
@@ -129,4 +129,7 @@ Department of Electrical and Computer Engineering, Duke University
 
 Thank you for your interest in advancing XR spatial tracking!
 
+## Ackownledgement
+
+This work was supported in part by NSF grants CSR-2312760, CNS-2112562, and IIS-2231975, NSF CAREER Award IIS-2046072, NSF NAIAD Award 2332744, a Cisco Research Award, a Meta Research Award, Defense Advanced Research Projects Agency Young Faculty Award HR0011-24-1-0001, and the Army Research Laboratory under Cooperative Agreement Number W911NF-23-2-0224.
 
