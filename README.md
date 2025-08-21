@@ -41,28 +41,35 @@ This repo includes:
 ## Repository Structure
 ```
 /hardware
-└─ 3D models and assembly guides for device mounting
+├─ MakerFrame  
+│  └─ 3D-printable frames for attaching markers to XR devices  
+└─ HeadFrame  
+   └─ 3D-printed helmet mounts (ARC rail compatible)
+
 
 /software
 ├─ calibration
-│ ├─ extrinsic calibration tools
-│ └─ timestamp synchronization utilities
+│  ├─ extrinsic calibration tools
+│  └─ timestamp synchronization utilities
 ├─ data_collection
-│ ├─ Unity and Xcode projects for device pose recording
-│ └─ sensor data collection scripts
+│  ├─ Unity and Xcode projects for device pose recording
+│  └─ sensor data collection scripts
 └─ analysis
-├─ pose error calculation (with EVO toolkit)
-└─ correlation analysis notebooks
+   ├─ pose error calculation (with EVO toolkit)
+   └─ correlation analysis notebooks
+
 
 /datasets
 ├─ raw sensor and pose data
 ├─ synchronized ground truth trajectories
 └─ processed analysis-ready data
 
+
 /docs
 ├─ experiment protocols
 ├─ motion patterns and environmental setup descriptions
 └─ literature and reference materials
+
 ```
 
 
