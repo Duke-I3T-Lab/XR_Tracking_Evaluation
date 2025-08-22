@@ -4,7 +4,7 @@ This repository contains the **testbed implementation, datasets, calibration too
 
 **"XR Reality Check: What Commercial Devices Deliver for Spatial Tracking"**  
 Tianyi Hu, Tianyuan Du, Zhehan Qu, Maria Gorlatova  
-To be presented at ISMAR 2025
+To be presented at IEEE ISMAR 2025
 
 ---
 
