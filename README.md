@@ -58,24 +58,46 @@ This repo includes:
    ├─ pose error calculation (with EVO toolkit)
    └─ correlation analysis notebooks
 
+```
 
-/datasets
-├─ raw sensor and pose data
-├─ synchronized ground truth trajectories
-└─ processed analysis-ready data
+## Benchmarking Dataset
 
+You could download the benchmarking dataset using the [following link](https://drive.google.com/file/d/1xlXNyw57xoSU1rogKmdtcxHyMz768Z7Z/view?usp=sharing).
 
-/docs
-├─ experiment protocols
-├─ motion patterns and environmental setup descriptions
-└─ literature and reference materials
+The dataset is organized in the following structure:
+```
+/<set>_<motion>_<environment>_<pace>
+├─ data
+│  ├─ <device>_error.csv              # Benchmarking error metrics for each device
+│  ├─ orb_combined.csv                # Aggregated ORBSLAM error data
+│  ├─ merge_result.csv                # Merged results across devices and runs
+│  ├─ merge_result_filled.csv         # Merged results with missing values filled
+│  ├─ <device>.png                    # Visualization of device trajectories/errors
+│  ├─ ORBSLAM3.png                    # Visualization for ORBSLAM3 trajectory/errors
+│  ├─ [gt]
+│  │    ├─ <device>_<timestamp>.csv   # Ground truth data for each device
+│  │    └─ gt_ORB.csv                 # ORBSLAM-specific ground truth
+│  ├─ [sensor]
+│  │    ├─ cam0.csv                   # Camera 0 sensor data (intrinsics, timestamps)
+│  │    ├─ cam1.csv                   # Camera 1 sensor data
+│  │    ├─ timestamp.txt              # Sensor data timestamps
+│  │    ├─ [cam0]                     # Directory of cam0 images named by timestamp
+│  │    │    └─ <timestamp>.png
+│  │    ├─ [cam1]                     # Directory of cam1 images named by timestamp
+│  │    │    └─ <timestamp>.png
+│  │    └─ [imu]
+│  │         └─ data.csv              # Raw IMU data (acceleration, gyro)
+│  └─ [xr]
+│       ├─ ORB_traj.csv               # ORBSLAM estimated trajectory
+│       ├─ ORB_log.csv                # ORBSLAM log files
+│       ├─ <device>_<timestamp>.csv   # Device XR trajectory logs
+│       └─ <device>_<timestamp>_updated.csv  # Post-processed XR logs
 
 ```
 
-
----
-
 ## Getting Started
+
+For detailed setup, please refer to the [Wiki page](https://github.com/Duke-I3T-Lab/XR_Tracking_Evaluation/wiki) of this repo.
 
 ### Prerequisites
 
