@@ -1,10 +1,10 @@
-# XR Spatial Tracking Evaluation
+# AR-TMT
 
-This repository contains the **testbed implementation, datasets, calibration tools, data collection framework, and analysis pipelines** as described in the paper:
+This repository contains the **Demo** as described in the paper:
 
 **"XR Reality Check: What Commercial Devices Deliver for Spatial Tracking"**  
-Tianyi Hu, Tianyuan Du, Zhehan Qu, Maria Gorlatova  
-To be presented at IEEE ISMAR 2025
+Sihun Baek, Zhehan Qu, Maria Gorlatova  
+To be presented at ACM VRST 2025
 
 ---
 
