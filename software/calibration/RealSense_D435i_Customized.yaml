@@ -1,110 +1,86 @@
 %YAML:1.0
 
-#--------------------------------------------------------------------------------------------
-# Camera Parameters. Adjust them!
-#--------------------------------------------------------------------------------------------
-Camera.type: "PinHole"
+File.version: "1.0"
 
-# Left Camera calibration and distortion parameters (OpenCV)
-Camera.fx: 382.613
-Camera.fy: 382.613
-Camera.cx: 320.183
-Camera.cy: 236.455
+Camera.type: "Rectified"
 
-# distortion parameters
-Camera.k1: 0.0
-Camera.k2: 0.0
-Camera.p1: 0.0
-Camera.p2: 0.0
+# Rectified Camera calibration (OpenCV)
 
-# Right Camera calibration and distortion parameters (OpenCV)
-Camera2.fx: 382.613
-Camera2.fy: 382.613
-Camera2.cx: 320.183
-Camera2.cy: 236.455
+Camera1.fx: 390.419
+Camera1.fy: 390.419
+Camera1.cx: 324.634
+Camera1.cy: 237.641
 
-# distortion parameters
-Camera2.k1: 0.0
-Camera2.k2: 0.0
-Camera2.p1: 0.0
-Camera2.p2: 0.0
-
-Tlr: !!opencv-matrix
-  rows: 3
-  cols: 4
-  dt: f
-  data: [0.999944904194234, -0.005995896892388268, -0.008616135818367872, 0.0023130500079081386,
-         0.006012909442446831, 0.999980021103111, 0.0019499524761188655, -0.003716484612968404,
-         0.0, 0.0, 1.0, 0.0,
-         0.0, 0.0, 0.0, 1.0]
+Stereo.b: 0.0499892
 
 # Camera resolution
 Camera.width: 640
 Camera.height: 480
 
-# Camera frames per second 
-Camera.fps: 30.0
+# Camera frames per second
+Camera.fps: 30
 
 # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
 Camera.RGB: 1
 
-# Image scale, it changes the image size to be processed (<1.0: reduce, >1.0: increase)
-Camera.imageScale: 0.5 # 0.5 #0.7071 # 1/sqrt(2)
-
 # Close/Far threshold. Baseline times.
-ThDepth: 40.0
-# stereo baseline times fx
-Camera.bf: 19.114771561
+Stereo.ThDepth: 40.0
 
 # Transformation from body-frame (imu) to left camera
-Tbc: !!opencv-matrix
-   rows: 4
-   cols: 4
-   dt: f
-   data: [0.999944904194234, -0.005995896892388268, -0.008616135818367872, 0.0023130500079081386,
-         0.006012909442446831, 0.999980021103111, 0.0019499524761188655, -0.003716484612968404,
-         0.008604271963486907, -0.0020016530863356564, 0.9999609791831384, -0.008346089313981597,
-         0.0, 0.0, 0.0, 1.0]
+IMU.T_b_c1: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: f
+  data: [0.999944904194234, -0.005995896892388268, -0.008616135818367872, 0.0023130500079081386,
+        0.006012909442446831, 0.999980021103111, 0.0019499524761188655, -0.003716484612968404,
+        0.008604271963486907, -0.0020016530863356564, 0.9999609791831384, -0.008346089313981597,
+        0.0, 0.0, 0.0, 1.0]
 
 # Do not insert KFs when recently lost
-InsertKFsWhenLost: 0
+IMU.InsertKFsWhenLost: 0
 
 # IMU noise (Use those from VINS-mono)
 IMU.NoiseGyro: 1.6881411323706878e-3 # 2.44e-4 #1e-3 # rad/s^0.5
 IMU.NoiseAcc: 1.2207254442641528e-2 # 1.47e-3 #1e-2 # m/s^1.5
 IMU.GyroWalk: 1.6640888988727792e-5 # rad/s^1.5
 IMU.AccWalk: 3.2245614068403440e-4 # m/s^2.5
-IMU.Frequency: 200
+IMU.Frequency: 200.0
 
 #--------------------------------------------------------------------------------------------
+
 # ORB Parameters
-#--------------------------------------------------------------------------------------------
-# ORB Extractor: Number of features per image
-ORBextractor.nFeatures: 1000
 
-# ORB Extractor: Scale factor between levels in the scale pyramid 	
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1250
+
+# ORB Extractor: Scale factor between levels in the scale pyramid
 ORBextractor.scaleFactor: 1.2
 
-# ORB Extractor: Number of levels in the scale pyramid	
+# ORB Extractor: Number of levels in the scale pyramid
 ORBextractor.nLevels: 8
 
 # ORB Extractor: Fast threshold
 # Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
 # Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
-# You can lower these values if your images have low contrast			
+# You can lower these values if your images have low contrast
 ORBextractor.iniThFAST: 20
 ORBextractor.minThFAST: 7
 
 #--------------------------------------------------------------------------------------------
+
 # Viewer Parameters
+
 #--------------------------------------------------------------------------------------------
+
 Viewer.KeyFrameSize: 0.05
-Viewer.KeyFrameLineWidth: 1
+Viewer.KeyFrameLineWidth: 1.0
 Viewer.GraphLineWidth: 0.9
-Viewer.PointSize: 2
+Viewer.PointSize: 2.0
 Viewer.CameraSize: 0.08
-Viewer.CameraLineWidth: 3
-Viewer.ViewpointX: 0
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
 Viewer.ViewpointY: -0.7
 Viewer.ViewpointZ: -3.5
-Viewer.ViewpointF: 500
+Viewer.ViewpointF: 500.0
